@@ -94,8 +94,8 @@ public class CarRow extends JPanel {
 		}
 	}
 
-	private InputField xInput = new InputField("X in meters:");
-	private InputField speedInput = new InputField("Speed in m/s:");
+	private InputField xInput = new InputField("X(m): ");
+	private InputField speedInput = new InputField("Speed(m/s): ");
 	private JButton saveBtn = new JButton("save");
 
 

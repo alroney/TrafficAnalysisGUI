@@ -79,7 +79,7 @@ public class Car implements Drawable, Updatable {
 		g.setColor(Color.LIGHT_GRAY);//set the color to purple
 		int location = SimulationPanel.getInstance().getXInPixelsFromXInMeters(this.getXLocation());//convert the x location to pixels
 		g.fillRect(location - (HEIGHT / 2), (int) y, WIDTH, HEIGHT);//draw the car
-		g.fillOval(location - (HEIGHT / 2) + 5, (int) y, WIDTH + 10, HEIGHT);//draw the car's hood
+		g.fillOval(location - (HEIGHT / 2) + 5, (int) y, WIDTH + 15, HEIGHT);//draw the car's hood
 	}
 
 

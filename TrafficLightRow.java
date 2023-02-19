@@ -116,10 +116,10 @@ public class TrafficLightRow extends JPanel {
 	//endregion
 
 	//region - VARIABLES - creates the varriable for the TrafficLightRow class
-		private InputField green = new InputField("Sec Green:");
-		private InputField yellow = new InputField("Sec Yellow:");
-		private InputField red = new InputField("Sec Red:");
-		private InputField xInput = new InputField("X:");
+		private InputField green = new InputField("Green(sec): ");
+		private InputField yellow = new InputField("Yellow(sec): ");
+		private InputField red = new InputField("Red(sec): ");
+		private InputField xInput = new InputField("X(m): ");
 		private JButton saveBtn = new JButton("save");
 	//endregion
 
