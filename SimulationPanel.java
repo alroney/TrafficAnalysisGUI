@@ -6,6 +6,35 @@
  * 				
  */
 
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | SimulationPanel                                                                                   |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -INSTANCE: SimulationPanel                                                                        |
+ * | -WIDTH: int                                                                                       |
+ * | -HEIGHT: int                                                                                      |
+ * | -TARGET_FPS: int                                                                                  |
+ * | -TARGET_FRAME_TIME_IN_NS: long                                                                    |
+ * | -lock: ReentrantReadWriteLock                                                                     |
+ * | -totalRunTimeInSecs: long                                                                         |
+ * | -lastLoopTimeNs: long                                                                             |
+ * | -entities: Entities                                                                               |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +getInstance(): SimulationPanel                                                                   |
+ * | +getXInPixelsFromXInMeters(xInMeters: double): int                                                |
+ * | +getWidthInMeters(): double                                                                       |
+ * | +getLeftBoundryInMeters(): double                                                                 |
+ * | +getRightBoundryInMeters(): double                                                                |
+ * | +getTotalRunTimeInSecs(): long                                                                    |
+ * | +addEntity(entity: Entity): void                                                                  |
+ * | +removeEntity(entity: Entity): void                                                               |
+ * | +update(): void                                                                                   |
+ * | +paintComponent(g: Graphics): void                                                                |
+ * | --------------------------------------------------------------------------------------------------|
+ * ------------------------------------------------------------------------------------------------------
+ */
+
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FontMetrics;

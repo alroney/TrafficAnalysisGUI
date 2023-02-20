@@ -8,6 +8,37 @@
  * 				and stops if it is red.
  */
 
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | Car                                                                                                |
+ * | -------------------------------------------------------------------------------------------------- |
+ * | -TICKS_PER_SECOND: int                                                                             |
+ * | -TICK_TIME_IN_NS: long                                                                             |
+ * | -HEIGHT: int                                                                                       |
+ * | -WIDTH: int                                                                                        |
+ * | -xLock: ReentrantReadWriteLock                                                                     |
+ * | -x: double                                                                                         |
+ * | -y: double                                                                                         |
+ * | -speedPerTick: double                                                                              |
+ * | -lastLoopTimeNs: long                                                                              |
+ * | -row: CarRow                                                                                       |
+ * | -thread: PausableThread                                                                            |
+ * | -------------------------------------------------------------------------------------------------- |
+ * | +Car(x: double, y: double, speedPerSec: double, row: CarRow)                                       |
+ * | +update(): void                                                                                    |
+ * | +draw(g: Graphics): void                                                                           |
+ * | +getXLocation(): double                                                                            |
+ * | +getYLocation(): double                                                                            |
+ * | +setXLocation(x: double): void                                                                     |
+ * ---------------------------------------------------------------------------------------------------
+ * Relations (Associations, Aggregations, Compositions, and Inheritance):
+ * 	- Car is a Drawable and Updatable
+ * 	- Car has a CarRow
+ * 	- Car has a PausableThread
+ * 	- Car has a ReentrantReadWriteLock
+ * ----------------------------------------------------------------------------------------------------
+ */
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
@@ -82,7 +113,6 @@ public class Car implements Drawable, Updatable {
 		g.fillOval(location - (HEIGHT / 2) + 5, (int) y, WIDTH + 15, HEIGHT);//draw the car's hood
 	}
 
-
 	//Method: get the car's x location
 	@Override
 	public double getXLocation() {
@@ -95,12 +125,10 @@ public class Car implements Drawable, Updatable {
 		}
 	}
 
-
 	//Method: get the car's y location
 	public double getYLocation() {
 		return this.y;
 	}
-
 
 	//Method: set the car's x location
 	public void setXLocation(double val) {
@@ -115,7 +143,5 @@ public class Car implements Drawable, Updatable {
 			this.xLock.writeLock().unlock();
 		}
 	}
-
-	
 
 }
