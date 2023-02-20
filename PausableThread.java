@@ -5,7 +5,21 @@
  * Description: The PausableThread class is a class that creates a thread that can be paused. It is used to create the thread that updates the totalRunTimeInSecs variable every second.
  */
 
-
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | PausableThread                                                                                    |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -thread: Thread                                                                                   |
+ * | -updatable: Updatable                                                                             |
+ * | -stopped: boolean                                                                                 |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +PausableThread(o: Updatable)                                                                     |
+ * | +start(): void                                                                                    |
+ * | +setName(name: String): void                                                                      |
+ * | +run(): void                                                                                      |
+ * | +stop(): void                                                                                     |
+ * ------------------------------------------------------------------------------------------------------
+ */
 
 public class PausableThread implements Runnable {
 

@@ -6,6 +6,37 @@
  * 				The running variable is used to control the simulation. It is set to true when the simulation is running and set to false when the simulation is paused. The running variable is used to control the execution of the threads.
  */
 
+ /* UML class diagram
+  * ----------------------------------------------------------------------------------------------------
+  * | ExecuteSimulation																					|
+  * | ------------------------------------------------------------------------------------------------- |
+  * | - runningLock: ReentrantReadWriteLock																|
+  * | - r: Lock																							|
+  * | - w: Lock																							|
+  * | - restarted: Condition																			|
+  * | - running: boolean																				|
+  * | ------------------------------------------------------------------------------------------------- |
+  * | + isRunning(): boolean																			|
+  * | + isRunning(val: boolean): void																	|
+  * | + main(args: String[]): void																		|
+  * ----------------------------------------------------------------------------------------------------
+  */
+
+ /* Heirarchy of the classes
+  * 	ExecuteSimulation
+  * 		|__ControlPanel
+  * 			|__CarControlPanel
+  * 			|__TrafficLightControlPanel
+  * 		|__SimulationPanel
+  *				|__CarRow
+  * 				|__Car
+  * 			|__TrafficLightRow
+  * 				|__TrafficLight
+  * 		|__PausableThread
+  *         |__Updatable
+  * 		|__Drawable
+  */
+
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

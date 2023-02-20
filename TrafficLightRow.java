@@ -6,6 +6,40 @@
  * 				It has a constructor that creates the row of traffic lights and adds it to the Entities class. It also creates a thread that updates the timeRunningInSec variable every second.
  */
 
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | TrafficLightRow                                                                                   |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -green: InputField                                                                                |
+ * | -yellow: InputField                                                                               |
+ * | -red: InputField                                                                                  |
+ * | -lock: ReentrantReadWriteLock                                                                     |
+ * | -timeRunningInSec: long                                                                           |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +TrafficLightRow()                                                                                |
+ * | +getGreen(): Optional<Double>                                                                     |
+ * | +getYellow(): Optional<Double>                                                                    |
+ * | +getRed(): Optional<Double>                                                                       |
+ * | +requestFocusInWindow(): boolean                                                                  |
+ * | +setEditable(b: boolean): void                                                                    |
+ * | +reset(): void                                                                                    |
+ * | --------------------------------------------------------------------------------------------------|
+ * UML Class Diagram for InputField
+ * ----------------------------------------------------------------------------------------------------
+ * | InputField                                                                                       |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -label: JLabel                                                                                    |
+ * | -textField: JTextField                                                                            |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +InputField(String)                                                                               |
+ * | +getText(): String                                                                                |
+ * | +setText(String)                                                                                  |
+ * | +isEditable(): boolean                                                                            |
+ * | +setEditable(boolean)                                                                             |
+ * | +handleChange()                                                                                   |
+ * ----------------------------------------------------------------------------------------------------
+ */
+
 import java.util.Optional;
 import java.awt.Color;
 import java.awt.event.ActionListener;

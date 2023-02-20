@@ -6,6 +6,35 @@
  * 				It has a constructor that creates the traffic light and adds it to the Entities class. It also creates a thread that updates the timeRunningInSec variable every second.
  */
 
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | TrafficLight                                                                                      |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -HEIGHT: int                                                                                      |
+ * | -timeGreen: double                                                                                |
+ * | -timeYellow: double                                                                               |
+ * | -timeRed: double                                                                                  |
+ * | -x: double                                                                                        |
+ * | -lock: ReentrantReadWriteLock                                                                     |
+ * | -timeRunningInSec: long                                                                           |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +TrafficLight(greenInSec: double, yellowInSec: double, redInSec: double, x: double)                |
+ * | +draw(g: Graphics): void                                                                           |
+ * | +cycleTime(): double                                                                              |
+ * | +timeIntoCurrentCycle(): double                                                                   |
+ * | +getColor(): Color                                                                                |
+ * | +getGreenTime(): double                                                                           |
+ * | +getYellowTime(): double                                                                          |
+ * | +getRedTime(): double                                                                             |
+ * | +getX(): double                                                                                   |
+ * | +setGreenTime(greenInSec: double): void                                                           |
+ * | +setYellowTime(yellowInSec: double): void                                                         |
+ * | +setRedTime(redInSec: double): void                                                               |
+ * | +setX(x: double): void                                                                            |
+ * | +reset(): void                                                                                    |
+ * | --------------------------------------------------------------------------------------------------|
+ */
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

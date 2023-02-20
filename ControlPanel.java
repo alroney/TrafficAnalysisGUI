@@ -6,6 +6,17 @@
  * 				It has a constructor that creates the buttons and adds them to the panel. It also adds the CarControlPanel and TrafficLightControlPanel to the panel.
  */
 
+/* UML class diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | ControlPanel																						|
+ * | ------------------------------------------------------------------------------------------------- |
+ * | none
+ * | ------------------------------------------------------------------------------------------------- |
+ * | + ControlPanel()																					|
+ * ----------------------------------------------------------------------------------------------------
+
+ */
+
 import java.awt.Dimension;
 import java.awt.GridLayout;
 

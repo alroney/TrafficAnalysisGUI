@@ -7,6 +7,44 @@
  * 				
  */
 
+/* UML class diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | CarRow                                                                                           |
+ * | ------------------------------------------------------------------------------------------------- |
+ * | - xInput: InputField                                                                             |
+ * | - speedInput: InputField                                                                         |
+ * | - saveBtn: JButton                                                                               |
+ * | - deleteBtn: JButton                                                                             |
+ * | ------------------------------------------------------------------------------------------------- |
+ * | + CarRow()                                                                                       |
+ * | + getXInput(): Optional<Double>                                                                  |
+ * | + getSpeedInput(): Optional<Double>                                                              |
+ * | + setXInput(double)                                                                              |
+ * | + setSpeedInput(double)                                                                          |
+ * | + setEditable(boolean)                                                                           |
+ * | + setSaveBtnActionListener(ActionListener)                                                       |
+ * | + setDeleteBtnActionListener(ActionListener)                                                     |
+ * | + setSaveBtnEnabled(boolean)                                                                     |
+ * | + setDeleteBtnEnabled(boolean)                                                                   |
+ * | + requestFocus()                                                                                 |
+ * ----------------------------------------------------------------------------------------------------
+ * 
+ * UML class diagram for InputField
+ * ----------------------------------------------------------------------------------------------------
+ * | InputField                                                                                      |
+ * | ------------------------------------------------------------------------------------------------- |
+ * | - label: JLabel                                                                                  |
+ * | - textField: JTextField                                                                          |
+ * | ------------------------------------------------------------------------------------------------- |
+ * | + InputField(String)                                                                             |
+ * | + getText(): String                                                                              |
+ * | + setText(String)                                                                                |
+ * | + isEditable(): boolean                                                                          |
+ * | + setEditable(boolean)                                                                           |
+ * | + handleChange()                                                                                 |
+ * ----------------------------------------------------------------------------------------------------
+ */
+
 import java.util.Optional;
 import java.awt.*;
 import java.awt.event.*;

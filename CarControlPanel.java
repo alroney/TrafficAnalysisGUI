@@ -7,6 +7,18 @@
  * 				When the btnAddCar is clicked, it creates a new CarRow object and adds it to the panel. 
  */
 
+ /* UML class diagram
+  * ----------------------------------------------------------------------------------------------------
+  * | CarControlPanel																					|
+  * | ------------------------------------------------------------------------------------------------- |
+  * | - recommendedY: int																				|
+  * | - btnAddCar: JButton																				|
+  * | ------------------------------------------------------------------------------------------------- |
+  * | + CarControlPanel()																				|
+  * | + setAddCarButtonEnabled(boolean): void															|
+  * | ------------------------------------------------------------------------------------------------- |
+  */
+
 import java.util.concurrent.ThreadLocalRandom;
 
 import javax.swing.BoxLayout;

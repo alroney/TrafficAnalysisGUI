@@ -6,6 +6,17 @@
  * 				It has a constructor that creates the control panel and adds it to the main control panel. It also adds the traffic lights to the control panel.
  */
 
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | TrafficLightControlPanel                                                                          |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -tlButton: JButton                                                                                |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +TrafficLightControlPanel()                                                                       |
+ * | +isPaused(b: boolean): void                                                                       |
+ * | --------------------------------------------------------------------------------------------------|
+ */
+
 import java.util.concurrent.ThreadLocalRandom;
 
 import javax.swing.BoxLayout;

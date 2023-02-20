@@ -5,6 +5,24 @@
  * Description: The Entities class is a class that creates a collection of entities. It is used to create the collection of entities that are displayed in the simulation.
  */
 
+/* UML Class Diagram
+ * ----------------------------------------------------------------------------------------------------
+ * | Entities                                                                                          |
+ * | --------------------------------------------------------------------------------------------------|
+ * | -INSTANCE: Entities                                                                                |
+ * | -entities: Collection<Drawable>                                                                    |
+ * | -trafficLights: Collection<TrafficLight>                                                           |
+ * | --------------------------------------------------------------------------------------------------|
+ * | +getInstance(): Entities                                                                           |
+ * | +add(o: Drawable): boolean                                                                         |
+ * | +iterator(): Iterator<Drawable>                                                                    |
+ * | +trafficLights(): Iterable<TrafficLight>                                                           |
+ * | +maxXLocation(): double                                                                            |
+ * | +minXLocation(): double                                                                            |
+ * | --------------------------------------------------------------------------------------------------|
+ * ------------------------------------------------------------------------------------------------------
+ */
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
